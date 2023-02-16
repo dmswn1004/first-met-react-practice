@@ -1,9 +1,9 @@
 ## Chapter 2 리액트 시작하기
 
 [2.1 HTML만으로 간단한 웹사이트 만들기](#21-html만으로-간단한-웹사이트-만들기)  
-[2.2 CSS를 사용하여 웹사이트 스타일링하기]  
-[2.3 웹사이트에 React.js 추가하기]  
-[2.4 create-react-app]  
+[2.2 CSS를 사용하여 웹사이트 스타일링하기](#22-css를-사용하여-웹사이트-스타일링하기)  
+[2.3 웹사이트에 React.js 추가하기](#23-웹사이트에-reactjs-추가하기)  
+[2.4 create-react-app](#24-create-react-app)  
 
 ---
 
@@ -37,6 +37,7 @@ h1 {
 ~~~html
         <link rel="stylesheet" href="styles.css">
 ~~~
+<img width="1552" alt="스크린샷 2023-02-17 오전 3 23 31" src="https://user-images.githubusercontent.com/101851472/219467977-6bf8980b-d89a-4148-b295-2e0095f524b5.png">
 
 ---
 
@@ -82,3 +83,5 @@ npx create-react-app [프로젝트명]
 cd [프로젝트명]
 npm start
 ~~~
+<img width="1552" alt="스크린샷 2023-02-17 오전 4 02 00" src="https://user-images.githubusercontent.com/101851472/219467948-8c639703-efd6-4efd-8a31-12430251df90.png">
+
