@@ -70,7 +70,7 @@ CSS(Cascading Style Sheets) : 웹사이트의 레이아웃과 글꼴, 색상 등
 - 자료형의 종류
     - Number 타입 : **숫자**를 다루기 위한 자료형 (정수, 소수)
     - String 타입 : 문자열을 다루기 위한 자료형 (" ", ' ')
-    - Boolean 타칩 : true, false
+    - Boolean 타 : true, false
     - Null 타입 : 값이 정의되긴 했는데 정의된 값이 null인 값을 의미하는 자료형
     - Undefined 타입 : 아직 정의되지 않은 상태, 변수 선언만 하고 값을 대입하지 않은 경우
     - Array 타입 : 배열을 나타내는 자료형 (index 값을 가짐)
