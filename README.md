@@ -6,4 +6,4 @@
 
 [Chapter 2 리액트 시작하기](https://github.com/dmswn1004/first-met-react-practice/tree/main/%08Chapter2#readme)
 
-Chapter 3 JSX 소개
+[Chapter 3 JSX 소개](https://github.com/dmswn1004/first-met-react-practice/tree/main/Chapter3#readme)
