@@ -107,6 +107,8 @@ React.creactElement(
   ~~~
   - 코드에서 div 태그의 children은 h1, h2 태그!
 
+---
+
 ### 3.5 JSX의 코드 작성해 보기
 > Book.jsx
 ~~~JSX
@@ -153,3 +155,4 @@ root.render(
 ~~~
 
 작성 완료 후 터미널에서 **npm start** 입력해 줍니다.
+<img width="1552" alt="스크린샷 2023-02-19 오후 8 00 40" src="https://user-images.githubusercontent.com/101851472/219943827-e39d492f-68d5-4158-97b4-2d927c578745.png">
