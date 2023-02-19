@@ -3,7 +3,7 @@
 [4.1 엘리먼트에 대해 알아보기](#41-엘리먼트에-대해-알아보기)  
 [4.2 엘리먼트 렌더링하기](#42-엘리먼트-렌더링하기)  
 [4.3 렌더링된 엘리먼트 업데이트하기](#43-렌더링된-엘리먼트-업데이트하기)  
-[4.4 시계 만들기]  
+[4.4 시계 만들기](#44-시계-만들기)  
 
 ---  
 
@@ -65,4 +65,40 @@
 ---
 
 ### 4.3 렌더링된 엘리먼트 업데이트하기  
+기존 엘리먼트를 변경하는 것이 아니라 새로운 엘리먼트를 생성해서 바꿔치기하는 것!
+
+---
+
+### 4.4 시계 만들기
+> Clock.jsx
+~~~JSX
+import React from "react";
+
+function Clock(props) {
+    return (
+        <div>
+            <h1>안녕, 리액트!</h1>
+            <h2>현재 시간: {new Date().toLocaleTimeString()}</h2>
+        </div>
+    );
+}
+
+export default Clock;
+~~~
+
+> index.js 수정 (리액트 v18 기준 reactdom.render 사용 불가로 코드 수정)
+~~~javaScript
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+setInterval(() => {
+  root.render(
+    <React.StrictMode>
+      <Clock />
+    </React.StrictMode>,
+  );
+}, 1000);
+~~~
+
+→ 실행 화면 
+<img width="1552" alt="스크린샷 2023-02-20 오전 2 24 48" src="https://user-images.githubusercontent.com/101851472/219964650-bfe0389d-e3d2-4d65-96b2-6c1274c98d58.png">
 
