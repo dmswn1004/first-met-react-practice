@@ -20,7 +20,7 @@ const element = <h1>Hello, world!</h1>;
 
 ### 3.2 JSX의 역할  
 - 내부적으로 XML/HTML 코드를 자바스크립트로 변환하는 과정 거침
-- 리액트의 **createElement()**라는 함수가 JSX 코드를 자바스크립트 코드로 변환하는 역할을 함
+- 리액트의 createElement()라는 함수가 JSX 코드를 자바스크립트 코드로 변환하는 역할을 함
 
 > JSX로 작성한 코드
 ~~~JSX
