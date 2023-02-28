@@ -64,7 +64,8 @@ function App(props) {
 ### 5.3 컴포넌트 만들기  
 1. 컴포넌트의 종류  
 <img width="169" alt="스크린샷 2023-02-28 오전 3 15 33" src="https://user-images.githubusercontent.com/101851472/221648823-4c4b8e66-914a-4b83-9572-6c4868d8ec26.png">
-- 함수 컴포넌트 → **훅(Hook)**
+
+- 함수 컴포넌트 → **훅(Hook)**  
 - 클래스 컴포넌트  
 
 2. 함수 컴포넌트  
