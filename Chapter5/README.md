@@ -127,8 +127,185 @@ ReactDOM.render(
 ---
 
 ### 5.5 컴포넌트 추출  
+: **큰 컴포넌트에서 일부를 추출해서 새로운 컴포넌트를 만드는 과정**    
+→ 컴포넌트의 재사용성 올라감 (컴포넌트의 기능과 목적이 명확해지고 props도 단순해짐)  
+→ 개발 속도 향상  
+> Comment 컴포넌트
+~~~javaScript
+function Comment(props) {
+    return (
+        <div className="comment">
+            <div className="user-info">
+                <img className="avatar"
+                    src={props.author.avatarUrl}
+                    alt={props.author.name}
+                />
+                <div className="user-info-name">
+                    {props.author.name}
+                </div>
+            </div>
 
+            <div className="comment-text">
+                {props.text}
+            </div>
 
+            <div className="comment-date">
+                {formatDate(props.date)}
+            </div>
+        </div>
+    );
+}
+~~~
+
+> Avatar 추출  
+~~~javaScript
+function Avatar(props) {
+    return (
+        <img className="avatar"
+            src={props.user.avatarUrl}
+            alt={props.user.name}
+        />
+    );
+}
+~~~
+
+> UserInfo 추출  
+~~~javaScript
+function UserInfo(props) {
+    return (
+        <div className="user-info">
+                <Avatar user={props.user} />
+                <div className="user-info-name">
+                    {props.author.name}
+                </div>
+            </div>
+    );
+}
+~~~
+
+> 추출한 컴포넌를 Comment 컴포넌트에 반영
+~~~javaScript
+function Comment(props) {
+    return (
+        <div className="comment">
+            <UserInfo user={props.author} />
+            <div className="comment-text">
+                {props.text}
+            </div>
+
+            <div className="comment-date">
+                {formatDate(props.date)}
+            </div>
+        </div>
+    );
+}
+~~~
+
+▶︎ 컴포넌트는 기능 단위로 구분하는 것이 좋고, 나중에 곧바로 재사용이 가능한 형태로 추출하는 것이 좋다!
 ---
 
 ### 5.6 댓글 컴포넌트 만들기  
+> Comment.jsx 
+~~~javaScript
+import React from "react";
+
+const styles = {
+    wrapper: {
+        margin: 8,
+        padding: 8,
+        display: "flex",
+        flexDirection: "row",
+        border: "1px solid grey",
+        borderRadius: 16,
+    },
+    imageContainer: {},
+    image: {
+        width: 50,
+        height: 50,
+        borderRadius: 25,
+    },
+    contentContainer: {
+        marginLeft: 8,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+    },
+    nameText: {
+        color: "black",
+        fontSize: 16,
+        fontWeight: "bold",
+    },
+    commentText: {
+        color: "black",
+        fontSize: 16,
+    },
+};
+
+function Comment(props) {
+    return (
+        <div style={styles.wrapper}>
+            <div style={styles.imageContainer}>
+                <img 
+                    src="https://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png"
+                    style={styles.image}
+                />
+            </div>
+
+            <div style={styles.contentContainer}>
+                <span style={styles.nameText}>{props.name}</span>
+                <span style={styles.commentText}>{props.comment}</span>
+            </div>
+
+        </div>
+    );
+}
+
+export default Comment;
+~~~
+
+> CommentList.jsx
+~~~javaScript
+import React from "react";
+import Comment from "./Comment";
+
+const comments = [
+    {
+        name: "김철수",
+        comment: "안녕하세요! ",
+    },
+    {
+        name: "홍길동",
+        comment: "반가워요! ",
+    },
+    {
+        name: "김땡땡",
+        comment: "잘 부탁드려요~",
+    },
+];
+
+function CommentList(props) {
+    return (
+        <dv>
+            {comments.map((comment) => {
+                return (
+                    <Comment name={comment.name} comment={comment.comment} />
+                );
+            })}
+        </dv>
+    );
+}
+
+export default CommentList;
+~~~
+
+> index.js 수정  
+~~~javaScript
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <CommentList />
+  </React.StrictMode>
+);
+~~~
+
+→ **npm start**  
