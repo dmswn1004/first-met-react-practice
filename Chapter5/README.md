@@ -201,7 +201,10 @@ function Comment(props) {
 }
 ~~~
 
+<img width="171" alt="스크린샷 2023-02-28 오후 2 26 26" src="https://user-images.githubusercontent.com/101851472/221773630-cb3fb359-d487-4a52-820c-c21dc7620966.png">
+
 ▶︎ 컴포넌트는 기능 단위로 구분하는 것이 좋고, 나중에 곧바로 재사용이 가능한 형태로 추출하는 것이 좋다!
+
 ---
 
 ### 5.6 댓글 컴포넌트 만들기  
@@ -309,3 +312,4 @@ root.render(
 ~~~
 
 → **npm start**  
+<img width="1552" alt="스크린샷 2023-02-28 오후 3 29 01" src="https://user-images.githubusercontent.com/101851472/221773555-ee0b31df-715a-436f-aa76-16bc51477021.png">
